@@ -92,27 +92,27 @@ search-form {
 						}
 
 						&.center {
+							margin-top: 50px;
 							text-align: center;
 							border: none;
 							color: $SeaGreen;
 
 							.fa-spinner {
-								margin-top: 50px;
 								font-size: 48px;
 							}
 						}
+					}
 
-						&:hover {
-							background: $SeaGreen;
+					li:not(.center):hover {
+						background: $SeaGreen;
+						color: #fff;
+
+						.lyrics-button {
 							color: #fff;
+						}
 
-							.lyrics-button {
-								color: #fff;
-							}
-
-							a {
-								color: #fff;
-							}
+						a {
+							color: #fff;
 						}
 					}
 				}

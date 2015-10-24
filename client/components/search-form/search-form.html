@@ -30,7 +30,8 @@
 						placeholder="Search by {{vm.searchBy !== 'both' ? vm.searchBy : 'artist &amp; track'}} ...." 
 						data-ng-model="vm.searchField" 
 						data-ng-change="vm.Search()" 
-						data-ng-model-options="{debounce: 300}">
+						data-ng-model-options="{debounce: 300}"
+						focus-me="vm.focusSearchField">
 				</div>
 
 				<div class="search-results" data-ng-if="vm.searchField">

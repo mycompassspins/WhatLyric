@@ -13,6 +13,7 @@
 
 			// Bound scope variables
 			searchField: '',
+			focusSearchField: true,
 			searchResults: [],
 			searchBy: 'both',
 			resultsLoading: false,
@@ -59,6 +60,7 @@
 		function changeSearchBy(searchType)
 		{
 			vm.searchBy = searchType;
+			vm.focusSearchField = true;
 			vm.Search();
 		}
 	}

@@ -14,10 +14,12 @@
 			// Bound scope variables
 			searchField: '',
 			searchResults: [],
+			searchBy: 'both',
 			resultsLoading: false,
 
 			// Methods
-			Search: search
+			Search: search,
+			ChangeSearchBy: changeSearchBy
 		};
 
 		return vm;
@@ -31,9 +33,10 @@
 			if (vm.searchField && vm.searchField.length > 2)
 			{
 				vm.resultsLoading = true;
-				
+
 				var params = {
-					val: encodeURIComponent(vm.searchField)
+					val: encodeURIComponent(vm.searchField),
+					searchType: vm.searchBy
 				};
 
 				SearchService.Search(params)
@@ -51,6 +54,12 @@
 			{
 				vm.searchResults = [];
 			}
+		}
+
+		function changeSearchBy(searchType)
+		{
+			vm.searchBy = searchType;
+			vm.Search();
 		}
 	}
 

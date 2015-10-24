@@ -12,6 +12,36 @@ search-form {
 			max-width: 100%;
 			margin: auto;
 
+			.search-by {
+				float: right;
+
+				p {
+					font-size: 14px;
+					font-weight: lighter;
+				}
+
+				button {
+					float: left;
+					margin: 2px;
+					background: none;
+					border: none;
+					outline: none;
+					color: $LightGray;
+
+					.fa {
+						color: $SeaGreen;
+					}
+
+					&.active {
+						color: $DarkGray;
+					}
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
 			.formblock {
 
 				input {
@@ -23,7 +53,7 @@ search-form {
 					width: 100%;
 					padding: 0 20px 0 20px;
 					box-sizing: border-box;
-					font-size: 28px;
+					font-size: 18px;
 					color: #404040;
 					font-family: Courier;
 					font-weight: 100;
@@ -50,26 +80,39 @@ search-form {
 
 					li {
 						border-bottom: 1px solid $LighterGray;
-						height: 50px;
-						line-height: 50px;
 						color: $LightGray;
+						padding: 5px 0 5px 0;
 
 						a {
 							display: block;
 							color: $LightGray;
 							text-decoration: none;
 							font-size: 12px;
-							padding: 0 5px 0 5px;
-
-							&:hover {
-								background: $SeaGreen;
-								color: #fff;
-							}
+							padding: 10px 0 10px 5px;
 						}
 
 						&.center {
 							text-align: center;
 							border: none;
+							color: $SeaGreen;
+
+							.fa-spinner {
+								margin-top: 50px;
+								font-size: 48px;
+							}
+						}
+
+						&:hover {
+							background: $SeaGreen;
+							color: #fff;
+
+							.lyrics-button {
+								color: #fff;
+							}
+
+							a {
+								color: #fff;
+							}
 						}
 					}
 				}

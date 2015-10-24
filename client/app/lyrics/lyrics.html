@@ -1,0 +1,29 @@
+
+			<site-header data-ng-init="vm.Init()"></site-header>
+
+			<div class="lyrics-container">
+
+				<div class="page-loading" data-ng-show="vm.pageLoading">
+					<span class="fa fa-spinner fa-spin"></span>
+				</div>
+
+				<div class="lyrics-inner" data-ng-if="vm.params.snippet !== ''">
+					<h1 class="title"> {{ vm.params.fullTitle }} </h1>
+					<p><small>by {{ vm.params.fullArtistName }} </small></p>
+					{{ vm.params.snippet }}
+
+					<div class="external-links">
+						<a href="{{ vm.params.artistLink }}" target="_blank">
+							<span class="fa fa-external-link"></span>
+							artist page
+						</a>
+						<a href="{{ vm.params.lyricsLink }}" target="_blank">
+							<span class="fa fa-external-link"></span>
+							full lyrics
+						</a>
+					</div>
+				</div>
+
+				<h1 class="no-results" data-ng-if="vm.noResults">no results match the given criteria</h1>
+
+			</div>

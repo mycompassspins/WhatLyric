@@ -1,8 +1,33 @@
 
 		<div class="search-form-inner">
 			<form id="search-form" name="form" novalidate>
+				<div class="search-by">
+					<p>search by: </p>
+					<button type="button" 
+						data-ng-click="vm.ChangeSearchBy('artist')" 
+						class="search-by" 
+						data-ng-class="{'active': vm.searchBy === 'artist'}">
+						<span class="fa fa-check" data-ng-show="vm.searchBy === 'artist'"></span>
+						artist
+					</button>
+					<button type="button" 
+						data-ng-click="vm.ChangeSearchBy('track')" 
+						class="search-by" 
+						data-ng-class="{'active': vm.searchBy === 'track'}">
+						<span class="fa fa-check" data-ng-show="vm.searchBy === 'track'"></span>
+						track
+					</button>
+					<button type="button" 
+						data-ng-click="vm.ChangeSearchBy('both')" 
+						class="search-by" 
+						data-ng-class="{'active': vm.searchBy === 'both'}">
+						<span class="fa fa-check" data-ng-show="vm.searchBy === 'both'"></span>
+						both
+					</button>
+				</div>
 				<div class="formblock">
-					<input type="text" id="searchField" name="searchField" 
+					<input type="text" id="searchField" name="searchField"
+						placeholder="Search by {{vm.searchBy !== 'both' ? vm.searchBy : 'artist &amp; track'}} ...." 
 						data-ng-model="vm.searchField" 
 						data-ng-change="vm.Search()" 
 						data-ng-model-options="{debounce: 300}">
@@ -22,9 +47,19 @@
 						</li>
 
 						<li data-ng-repeat="result in vm.searchResults">
-							<a href="{{ result.url }}" target="_blank">
+							<a 
+								ui-sref="lyrics({
+									artist: result.linkFriendlyArtistName,
+									title: result.linkFriendlyTitle,
+									snippet: result.snippet,
+									fullArtistName: result.artist.name,
+									fullTitle: result.title
+								})">
 								{{ result.artist.name }} - {{ result.title }}
 							</a>
+							<!-- <span class="lyrics-button">
+								<span class="fa fa-external-link"></span>
+							</span> -->
 						</li>
 					</ul>
 				</div>

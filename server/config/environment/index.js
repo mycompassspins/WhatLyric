@@ -24,10 +24,8 @@
 			// Server IP
 			ip: process.env.IP || '0.0.0.0',
 
-			// Secret for session, you will want to change this and make it an environment variable
-			secrets: {
-				session: 'music-nlyrics-secret'
-			}
+			// Lyrics n Music API
+			lyricsNMusicApiKey: process.env.LYRICS_N_MUSIC_API_KEY || process.env.OPENSHIFT_LYRICS_N_MUSIC_API_KEY || 'lyrics-n-music-api-key'
 		};
 
 		// Export the config object based on the NODE_ENV

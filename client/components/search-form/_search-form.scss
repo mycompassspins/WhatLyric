@@ -44,6 +44,35 @@ search-form {
 				width: 99%;
 				background: #fff;
 				box-shadow: 0 0 5px $LightGray;
+				text-align: left;
+
+				.results-list {
+
+					li {
+						border-bottom: 1px solid $LighterGray;
+						height: 50px;
+						line-height: 50px;
+						color: $LightGray;
+
+						a {
+							display: block;
+							color: $LightGray;
+							text-decoration: none;
+							font-size: 12px;
+							padding: 0 5px 0 5px;
+
+							&:hover {
+								background: $SeaGreen;
+								color: #fff;
+							}
+						}
+
+						&.center {
+							text-align: center;
+							border: none;
+						}
+					}
+				}
 			}
 		}
 	}

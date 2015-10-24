@@ -2,11 +2,31 @@
 		<div class="search-form-inner">
 			<form id="search-form" name="form" novalidate>
 				<div class="formblock">
-					<input type="text" id="searchField" name="searchField" data-ng-model="vm.searchField" data-ng-change="vm.Search()">
+					<input type="text" id="searchField" name="searchField" 
+						data-ng-model="vm.searchField" 
+						data-ng-change="vm.Search()" 
+						data-ng-model-options="{debounce: 300}">
 				</div>
 
 				<div class="search-results" data-ng-show="vm.searchField">
-					
+					<ul class="results-list">
+
+						<li class="center" 
+							data-ng-show="!vm.searchResults.length && !vm.resultsLoading">
+							no results
+						</li>
+
+						<li class="center" 
+							data-ng-show="vm.resultsLoading && !vm.searchResults.length">
+							<span class="fa fa-spinner fa-spin"></span>
+						</li>
+
+						<li data-ng-repeat="result in vm.searchResults">
+							<a href="{{ result.url }}" target="_blank">
+								{{ result.artist.name }} - {{ result.title }}
+							</a>
+						</li>
+					</ul>
 				</div>
 			</form>
 		</div>

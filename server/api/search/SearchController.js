@@ -5,7 +5,6 @@
 	var apiKey = require('../../config/environment').lyricsNMusicApiKey;
 	var request = require('request');
 	var async = require('async');
-	var prettyJson = require('prettyjson');
 
 	module.exports = SearchController();
 

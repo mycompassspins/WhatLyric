@@ -388,22 +388,22 @@ module.exports = function (grunt) {
     },
 
     // Compiles ES6 to JavaScript using Babel
-    babel: {
-      options: {
-        sourceMap: true
-      },
-      server: {
-        options: {
-          optional: ['runtime']
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.server %>',
-          src: ['**/*.{js,json}'],
-          dest: '<%= yeoman.dist %>/<%= yeoman.server %>'
-        }]
-      }
-    },
+    // babel: {
+    //   options: {
+    //     sourceMap: true
+    //   },
+    //   server: {
+    //     options: {
+    //       optional: ['runtime']
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.server %>',
+    //       src: ['**/*.{js,json}'],
+    //       dest: '<%= yeoman.dist %>/<%= yeoman.server %>'
+    //     }]
+    //   }
+    // },
 
     // Compiles Sass to CSS
     sass: {
@@ -638,7 +638,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'babel:server',
+    //'babel:server',
     'cdnify',
     'cssmin',
     'uglify',

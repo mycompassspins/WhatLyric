@@ -9,6 +9,10 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'components/site-header/site-header.html',
+			link: function(scope, elem, attrs)
+			{
+				elem.addClass('site-header');
+			}
 		};
 	});
 	

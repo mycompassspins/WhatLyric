@@ -14,7 +14,7 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 ### Usage
 
-This is pretty straight forward. Use the app locally by following the steps below and visiting http://localhost:9000, or see it online at [WhatLyric](http://whatlyric.rhcloud.com). You can actually do sort of a search from the lyrics page, via the browser's address bar. E.g., http://localhost:9000/lyrics/paul-simon/the-cool-cool-river or, if you're visiting the app on the staging server, http://whatlyric.rhcloud.com/lyrics/billy-joel/and-so-it-goes (you can replace the hyphens with spaces and it will function just the same).
+This is pretty straight forward. Use the app locally by following the steps below and visiting `localhost:9000`, or see it online at [WhatLyric](http://whatlyric-necstage.rhcloud.com). You can actually do sort of a search from the lyrics page via the browser's address bar, in addition to using the main search functionality. E.g., `http://rootdomain.com/lyrics/paul simon/the cool cool river` or `http://rootdomain.com/lyrics/billy-joel/and-so-it-goes` (it will function the same with or without the hyphens).
 
 ### Developing
 

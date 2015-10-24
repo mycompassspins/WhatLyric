@@ -9,7 +9,7 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'components/search-form/search-form.html',
-			controller: 'SearchFormController',
+			controller: 'MainController',
 			controllerAs: 'vm',
 			link: function(scope, elem, attrs)
 			{

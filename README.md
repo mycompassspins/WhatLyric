@@ -11,7 +11,10 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 - [Bower](bower.io) (`npm install --global bower`)
 - [Ruby](https://www.ruby-lang.org) and then `gem install sass`
 - [Grunt](http://gruntjs.com/) (`npm install --global grunt-cli`)
-- [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
+
+### Usage
+
+This is pretty straight forward. Use the app locally by following the steps below and visiting http://localhost:9000, or see it online at [WhatLyric](http://whatlyric.rhcloud.com). You can actually do sort of a search from the lyrics page, via the browser's address bar. E.g., http://localhost:9000/lyrics/paul-simon/the-cool-cool-river or, if you're visiting the app on the staging server, http://whatlyric.rhcloud.com/lyrics/billy-joel/and-so-it-goes (you can replace the hyphens with spaces and it will function just the same).
 
 ### Developing
 

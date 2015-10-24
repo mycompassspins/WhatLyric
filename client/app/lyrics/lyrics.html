@@ -3,11 +3,11 @@
 
 			<div class="lyrics-container">
 
-				<div class="page-loading" data-ng-show="vm.pageLoading">
+				<div class="page-loading fade" data-ng-show="vm.pageLoading">
 					<span class="fa fa-spinner fa-spin"></span>
 				</div>
 
-				<div class="lyrics-inner" data-ng-if="vm.params.snippet !== ''">
+				<div class="lyrics-inner fade" data-ng-show="vm.params.snippet !== ''">
 					<h1 class="title"> {{ vm.params.fullTitle }} </h1>
 					<p><small>by {{ vm.params.fullArtistName }} </small></p>
 					{{ vm.params.snippet }}

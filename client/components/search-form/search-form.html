@@ -7,21 +7,21 @@
 						data-ng-click="vm.ChangeSearchBy('artist')" 
 						class="search-by" 
 						data-ng-class="{'active': vm.searchBy === 'artist'}">
-						<span class="fa fa-check" data-ng-show="vm.searchBy === 'artist'"></span>
+						<span class="fa fa-check" data-ng-if="vm.searchBy === 'artist'"></span>
 						artist
 					</button>
 					<button type="button" 
 						data-ng-click="vm.ChangeSearchBy('track')" 
 						class="search-by" 
 						data-ng-class="{'active': vm.searchBy === 'track'}">
-						<span class="fa fa-check" data-ng-show="vm.searchBy === 'track'"></span>
+						<span class="fa fa-check" data-ng-if="vm.searchBy === 'track'"></span>
 						track
 					</button>
 					<button type="button" 
 						data-ng-click="vm.ChangeSearchBy('both')" 
 						class="search-by" 
 						data-ng-class="{'active': vm.searchBy === 'both'}">
-						<span class="fa fa-check" data-ng-show="vm.searchBy === 'both'"></span>
+						<span class="fa fa-check" data-ng-if="vm.searchBy === 'both'"></span>
 						both
 					</button>
 				</div>
@@ -33,16 +33,16 @@
 						data-ng-model-options="{debounce: 300}">
 				</div>
 
-				<div class="search-results" data-ng-show="vm.searchField">
+				<div class="search-results" data-ng-if="vm.searchField">
 					<ul class="results-list">
 
 						<li class="center" 
-							data-ng-show="!vm.searchResults.length && !vm.resultsLoading">
+							data-ng-if="!vm.searchResults.length && !vm.resultsLoading">
 							no results
 						</li>
 
 						<li class="center" 
-							data-ng-show="vm.resultsLoading && !vm.searchResults.length">
+							data-ng-if="vm.resultsLoading && !vm.searchResults.length">
 							<span class="fa fa-spinner fa-spin"></span>
 						</li>
 
@@ -53,13 +53,12 @@
 									title: result.linkFriendlyTitle,
 									snippet: result.snippet,
 									fullArtistName: result.artist.name,
-									fullTitle: result.title
+									fullTitle: result.title,
+									lyricsLink: result.url,
+									artistLink: result.artist.url
 								})">
 								{{ result.artist.name }} - {{ result.title }}
 							</a>
-							<!-- <span class="lyrics-button">
-								<span class="fa fa-external-link"></span>
-							</span> -->
 						</li>
 					</ul>
 				</div>

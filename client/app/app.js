@@ -7,7 +7,8 @@
 		'ngCookies',
 		'ngResource',
 		'ngSanitize',
-		'ui.router'
+		'ui.router',
+		'ngAnimate'
 	])
 
 	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', Config]);

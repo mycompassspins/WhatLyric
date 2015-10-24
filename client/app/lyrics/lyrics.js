@@ -19,7 +19,9 @@
 			params: {
 				snippet: '',
 				fullTitle: '',
-				fullArtistName: ''
+				fullArtistName: '',
+				lyricsLink: '',
+				artistLink: ''
 			}
 		});
 	}

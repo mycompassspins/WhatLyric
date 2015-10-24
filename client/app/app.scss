@@ -25,4 +25,30 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 body {
 	background: #e8e8e8;
 	font-family: Courier;
+
+	.fade.ng-hide {
+		animation: fadeOut 0.5s linear;
+	}
+
+	.fade.ng-show {
+		animation: fadeIn 0.5s linear;
+	}
+
+	@keyframes fadeIn {
+		from { 
+			opacity:0; 
+		}
+		to { 
+			opacity:1; 
+		}
+	}
+
+	@keyframes fadeOut {
+		from { 
+			opacity:1; 
+		}
+		to { 
+			opacity:0; 
+		}
+	}
 }

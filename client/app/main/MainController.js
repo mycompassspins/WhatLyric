@@ -51,10 +51,6 @@
 					}
 				});
 			}
-			else
-			{
-				vm.searchResults = [];
-			}
 		}
 
 		function changeSearchBy(searchType)

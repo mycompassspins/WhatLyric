@@ -66,7 +66,7 @@ module.exports = function (grunt) {
       },
       jsTest: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{spec,mock}.js'],
-        tasks: ['newer:jshint:all', 'wiredep:test', 'karma']
+        tasks: ['wiredep:test', 'karma']
       },
       injectSass: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{scss,sass}'],
@@ -376,6 +376,34 @@ module.exports = function (grunt) {
         'sass',
         'imagemin'
       ]
+    },
+
+    // Test settings
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        singleRun: true
+      }
+    },
+
+    mochaTest: {
+      options: {
+        reporter: 'spec'
+      },
+      src: ['server/**/*.spec.js']
+    },
+
+    protractor: {
+      options: {
+        configFile: 'protractor.conf.js'
+      },
+      chrome: {
+        options: {
+          args: {
+            browser: 'chrome'
+          }
+        }
+      }
     },
 
     env: {

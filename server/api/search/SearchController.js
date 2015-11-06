@@ -13,7 +13,7 @@
 		// Interface
 		var controller = {
 			Search: search
-		}
+		};
 
 		return controller;
 

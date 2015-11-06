@@ -1,5 +1,5 @@
 (function()
-{	
+{
 	'use strict';
 
 	angular.module('WhatLyricApp')
@@ -18,6 +18,9 @@
 			searchBy: 'both',
 			resultsLoading: false,
 
+			// Services
+			SearchService: SearchService,
+
 			// Methods
 			Search: search,
 			ChangeSearchBy: changeSearchBy
@@ -26,10 +29,10 @@
 		return vm;
 
 		// Implementation
-		
+
 		function search()
 		{
-			vm.searchResults = [];
+      		vm.searchResults = [];
 
 			if (vm.searchField && vm.searchField.length > 2)
 			{
@@ -45,7 +48,7 @@
 				.then(function parseResponse(res)
 				{
 					vm.resultsLoading = false;
-					if (res.success) 
+					if (res.success)
 					{
 						vm.searchResults = res.searchResults;
 					}
